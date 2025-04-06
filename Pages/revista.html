@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista de Articulos</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="name-gym">💪 Revista Fitness</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#articulos">Articulos</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#comentarios">Comentarios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="revista-container" >
+        <video autoplay muted loop class="hero-video">
+            <source src="../Multimedia/videos/entrenamiento.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+        <!-- Sección de Artículos Destacados (fuera del sistema de filtros) -->
+            <section class="destacados">
+                <h2>Artículos Destacados</h2>
+                <div class="grid-articulos">
+                <article class="reveal">
+                    <h3>Rutina HIIT para Quemar Grasa</h3>
+                    <p class="tag">Cardio</p>
+                    <p>Una guía rápida y efectiva para entrenamientos de alta intensidad.</p>
+                </article>
+                <article class="reveal">
+                    <h3>Yoga para Principiantes</h3>
+                    <p class="tag">Flexibilidad</p>
+                    <p>Posturas básicas y consejos para mejorar tu movilidad.</p>
+                </article>
+                <article class="reveal">
+                    <h3>Alimentación Pre-Entreno</h3>
+                    <p class="tag">Nutrición</p>
+                    <p>Qué comer antes de entrenar para maximizar el rendimiento.</p>
+                </article>
+                <article class="reveal">
+                    <h3>Entrenamiento en Casa sin Equipo</h3>
+                    <p class="tag">Fuerza</p>
+                    <p>Rutinas prácticas que puedes hacer en tu sala.</p>
+                </article>
+                <article class="reveal">
+                    <h3>Errores Comunes en el Gym</h3>
+                    <p class="tag">Tips</p>
+                    <p>Evita lesiones y mejora tus resultados con estos consejos.</p>
+                </article>
+                </div>
+            </section>
+        <!-- Sección de Categorías y Filtro -->
+            <section class="categorias" id="categorias">
+                <h2>Categorías</h2>
+            
+                <!-- Inputs de filtro ocultos -->
+                <input type="radio" name="filtro" id="filtro-todos" hidden checked>
+                <input type="radio" name="filtro" id="filtro-cardio" hidden>
+                <input type="radio" name="filtro" id="filtro-fuerza" hidden>
+                <input type="radio" name="filtro" id="filtro-nutricion" hidden>
+                <input type="radio" name="filtro" id="filtro-flexibilidad" hidden>
+                <input type="radio" name="filtro" id="filtro-tips" hidden>
+            
+                <!-- Botones de filtro -->
+                <div class="grid-categorias">
+                <label class="categoria" for="filtro-todos">Todos</label>
+                <label class="categoria" for="filtro-cardio">Cardio</label>
+                <label class="categoria" for="filtro-fuerza">Fuerza</label>
+                <label class="categoria" for="filtro-nutricion">Nutrición</label>
+                <label class="categoria" for="filtro-flexibilidad">Flexibilidad</label>
+                <label class="categoria" for="filtro-tips">Tips</label>
+                </div>
+            
+                <!-- Contenedor de artículos -->
+                <div class="articulos grid-articulos">
+                <!-- 🏃 Cardio -->
+                <article class="reveal cardio"><h3>HIIT en 15 minutos</h3><p>Quema grasa rápido con esta rutina explosiva.</p></article>
+                <article class="reveal cardio"><h3>Cardio en casa</h3><p>Rutina intensa sin salir de tu sala.</p></article>
+                <article class="reveal cardio"><h3>Saltar la cuerda</h3><p>Mejor ejercicio para el corazón.</p></article>
+                <article class="reveal cardio"><h3>Trote vs cinta</h3><p>¿Qué es mejor para ti?</p></article>
+                <article class="reveal cardio"><h3>Burpees quemagrasa</h3><p>Ejercicio completo y mortal.</p></article>
+                <article class="reveal cardio"><h3>Cardio Tabata</h3><p>Entrena en intervalos cortos.</p></article>
+                <article class="reveal cardio"><h3>Cardio para novatos</h3><p>Empieza a moverte con esta rutina.</p></article>
+                <article class="reveal cardio"><h3>Funcional express</h3><p>Cardio + fuerza en 20 minutos.</p></article>
+                <article class="reveal cardio"><h3>HIIT para piernas</h3><p>Quema y fortalece al mismo tiempo.</p></article>
+                <article class="reveal cardio"><h3>Saltos pliométricos</h3><p>Explosividad y ritmo cardiaco arriba.</p></article>
+            
+                <!-- 🏋️ Fuerza -->
+                <article class="reveal fuerza"><h3>Rutina full body</h3><p>Entrena todo el cuerpo en una sesión.</p></article>
+                <article class="reveal fuerza"><h3>Levantamiento para novatos</h3><p>Consejos para empezar sin miedo.</p></article>
+                <article class="reveal fuerza"><h3>Calistenia básica</h3><p>Usá tu peso corporal para ganar fuerza.</p></article>
+                <article class="reveal fuerza"><h3>Push-pull-legs</h3><p>Organizá tu semana como un pro.</p></article>
+                <article class="reveal fuerza"><h3>Rutina con mancuernas</h3><p>Potencia en casa con poco equipo.</p></article>
+                <article class="reveal fuerza"><h3>Fuerza isométrica</h3><p>El poder de mantener la tensión.</p></article>
+                <article class="reveal fuerza"><h3>Cómo hacer peso muerto</h3><p>Técnica correcta y tips.</p></article>
+                <article class="reveal fuerza"><h3>Entrenamiento de pierna</h3><p>Glúteos, cuádriceps y más.</p></article>
+                <article class="reveal fuerza"><h3>Dominadas progresivas</h3><p>Aprendé a hacer tu primera.</p></article>
+                <article class="reveal fuerza"><h3>Plan de fuerza semanal</h3><p>Organización + resultados.</p></article>
+            
+                <!-- 🥗 Nutrición -->
+                <article class="reveal nutricion"><h3>Pre-entreno ideal</h3><p>Qué comer antes de entrenar.</p></article>
+                <article class="reveal nutricion"><h3>Comida post-gym</h3><p>Recuperá energía y músculo.</p></article>
+                <article class="reveal nutricion"><h3>Proteínas vegetales</h3><p>Alternativas sin carne.</p></article>
+                <article class="reveal nutricion"><h3>Suplementos básicos</h3><p>Qué sirve realmente.</p></article>
+                <article class="reveal nutricion"><h3>Snacks saludables</h3><p>Ideas rápidas y fitness.</p></article>
+                <article class="reveal nutricion"><h3>Desayunos nutritivos</h3><p>Comenzá fuerte cada día.</p></article>
+                <article class="reveal nutricion"><h3>Hidratación efectiva</h3><p>Qué tomar y cuándo.</p></article>
+                <article class="reveal nutricion"><h3>Ayuno intermitente</h3><p>Ventajas y cuidados.</p></article>
+                <article class="reveal nutricion"><h3>Errores comunes al comer</h3><p>Lo que arruina tu progreso.</p></article>
+                <article class="reveal nutricion"><h3>Guía de macros</h3><p>Proteínas, carbos y grasas.</p></article>
+            
+                <!-- 🧘 Flexibilidad -->
+                <article class="reveal flexibilidad"><h3>Yoga básico</h3><p>Movilidad para todos los niveles.</p></article>
+                <article class="reveal flexibilidad"><h3>Estiramientos matutinos</h3><p>Arrancá el día relajado.</p></article>
+                <article class="reveal flexibilidad"><h3>Movilidad articular</h3><p>Mantené tus articulaciones sanas.</p></article>
+                <article class="reveal flexibilidad"><h3>Flexibilidad en 10 min</h3><p>Una rutina rápida y efectiva.</p></article>
+                <article class="reveal flexibilidad"><h3>Yoga post-entreno</h3><p>Recuperá tu cuerpo con flow.</p></article>
+                <article class="reveal flexibilidad"><h3>Elongación activa</h3><p>Más allá de estirar.</p></article>
+                <article class="reveal flexibilidad"><h3>Posturas antiestrés</h3><p>Relajá cuerpo y mente.</p></article>
+                <article class="reveal flexibilidad"><h3>Espalda sana</h3><p>Tips para mantenerla fuerte y flexible.</p></article>
+                <article class="reveal flexibilidad"><h3>Respiración y cuerpo</h3><p>Movilidad guiada por tu aire.</p></article>
+                <article class="reveal flexibilidad"><h3>Yoga para caderas</h3><p>Mejorá tu rango de movimiento.</p></article>
+            
+                <!-- 💡 Tips -->
+                <article class="reveal tips"><h3>Errores comunes</h3><p>Lo que muchos hacen mal en el gym.</p></article>
+                <article class="reveal tips"><h3>Mantener la motivación</h3><p>Trucos para no rendirte.</p></article>
+                <article class="reveal tips"><h3>Entrenar con poco tiempo</h3><p>Cómo sacarle el jugo a 20 minutos.</p></article>
+                <article class="reveal tips"><h3>Cómo crear tu rutina</h3><p>Elegí bien los ejercicios.</p></article>
+                <article class="reveal tips"><h3>Cuida tus articulaciones</h3><p>Prevención es clave.</p></article>
+                <article class="reveal tips"><h3>Tips para progresar</h3><p>No te estanques nunca.</p></article>
+                <article class="reveal tips"><h3>Diario de entrenamiento</h3><p>Organizá y medí tu avance.</p></article>
+                <article class="reveal tips"><h3>Cómo calentar bien</h3><p>No empieces en frío.</p></article>
+                <article class="reveal tips"><h3>Escuchar al cuerpo</h3><p>Detectá señales de sobreentreno.</p></article>
+                <article class="reveal tips"><h3>Equilibrio entrenamiento/descanso</h3><p>La clave del progreso sostenible.</p></article>
+                </div>
+            </section>
+
+        <!-- Sección de Comentarios -->
+        <section class="comentarios" id="comentarios">
+            <h2>Comentarios Recientes</h2>
+            <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <strong>LuisFit93:</strong> Excelente rutina de HIIT, lo probé esta semana y me encantó.
+            </div>
+            </div>
+            <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <strong>SofiYoga:</strong> Muy buenos los tips de yoga. Me ayudó a estirar mejor.
+            </div>
+            </div>
+            <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <strong>MaxNutri:</strong> Súper útil lo de la comida pre-entreno, ¡gracias!
+            </div>
+            </div>
+            <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <strong>ClauStrong:</strong> Amo entrenar en casa y estas rutinas están geniales.
+            </div>
+            </div>
+            <div class="comentario">
+            <div class="avatar"></div>
+            <div class="contenido">
+                <strong>AndyTips:</strong> Me sirvieron los consejos, estaba cometiendo varios errores 😅
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Suscripción -->
+            <div class="newsletter">
+                <h3>Suscríbete para mantenerte Informado</h3>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <!-- Contacto -->
+            <div class="social-links">
+                <h3>Contacto</h3>
+                <p>Correo: newellsito@gmail.com</p>
+                <p>Teléfono: +54 978941354</p>
+                <ul>
+                    <li><a href="#"><img src="../Multimedia/images/icons/facebook-icon.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="../Multimedia/images/icons/instagram-icon.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="../Multimedia/images/icons/tiktok-icon.png" alt="TikTok"></a></li>
+                    <li><a href="#"><img src="../Multimedia/images/icons/youtube-icon.png" alt="YouTube"></a></li>
+                    <li><a href="#"><img src="../Multimedia/images/icons/twitter-icon.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <!-- Mapa -->
+            <div class="map">
+                <h3>Encuéntranos aquí</h3>
+                <p>Av. Bolivia 1239, San Salvador de Jujuy, Jujuy, Argentina</p>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.4981779725604!2d-65.2933567!3d-24.189325999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1743904644566!5m2!1ses-419!2sar" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </iframe>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Esparta Gym. Todos los derechos reservados.</p>
+            <p>Desarrollado por JaviDev</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script>
+        // Scroll Reveal básico sin librerías
+        const reveals = document.querySelectorAll('.reveal');
+      
+        function revealOnScroll() {
+          reveals.forEach(el => {
+            const top = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+      
+            if (top < windowHeight - 100) {
+              el.classList.add('visible');
+            }
+          });
+        }
+      
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+      </script>
+</body>
+</html>
