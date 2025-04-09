@@ -62,10 +62,12 @@ nav{
     background-color: #41df2d; /* Cambia el fondo al pasar el cursor */
     color: rgb(17, 17, 17); /* Cambia el color del texto */
 }
+
 .main-container{
     flex: 1; /* Permite que el contenedor principal ocupe el espacio restante */
 }
 .hero {
+    margin-top: 80px; /* Espacio entre el header y el contenedor principal */
     position: relative;
     width: 100%;
     height: 100vh;
@@ -74,7 +76,7 @@ nav{
 }
 
 .hero-video {
-    position: fixed;         /* Usá fixed en vez de absolute */
+    position: fixed;         /* Usar fixed para q tape toda la pantalla */
     top: 0;
     left: 0;
     width: 100vw;            /* Asegura el ancho completo */
@@ -85,24 +87,26 @@ nav{
     pointer-events: none;
 }
 
-.hero-overlay {
-    position: absolute;
+.hero-overlay, .hero-content {
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    justify-content: end;
     color: white;
     z-index: 1;
-}
-.hero-content {
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté encima del video */
     padding: 20px;
-    color: white;
-    text-align: center;
-    min-height: calc(100vh - 200px); /* Ajusta la altura mínima del contenedor */
+}
 
+.hero-content {
+    margin-top: 20px; /* Espacio entre el video y el contenido */
+    min-height: calc(100vh - 200px); /* Ajusta la altura mínima del contenedor */
+    position: relative; /* Permite que el contenido se posicione relativo a su contenedor */
+}
+
+.hero-overlay {
+    position: absolute;
+    justify-content: end;
 }
 
 .hero-title {
@@ -333,6 +337,7 @@ footer {
 .carrusel-box ul{
     display: flex;
     padding: 0;
+    gap: 30px; /* espacio entre las imágenes */
     width: 300%;
     animation: carrusel 10s infinite alternate ease-in-out;
     position: absolute;
@@ -347,20 +352,17 @@ footer {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsión */
 }
 @keyframes carrusel{
 
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
 
-    250%{margin-left: -100%;}
-    45%{margin-left: -100%;}
+    50% { margin-left: calc(-100% - 10px); } /* Ajusta el desplazamiento considerando el gap */
+    70% { margin-left: calc(-100% - 10px); }
 
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-    75%{margin-left: -300%;}
-    100%{margin-left: -300%;}
+    100% { margin-left: calc(-200% - 20px); } /* Ajusta el desplazamiento considerando el gap */
 }
 /* Sistema de Filtrado */
 .filter-section {
@@ -397,6 +399,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 .gallery .item {
@@ -418,14 +421,14 @@ footer {
 
 /* Tabla de horarios */
 .schedule-section {
-    display: flex;
+    display: block;
     text-align: center;
-    justify-content: center;
-    margin-bottom: auto;
+    margin-top: 20px;
     background-color: black;
     color: #f8fdf7;
-    padding: 0px;
+    padding: 20px;
     font-size: 2rem;
+
 }
 
 .schedule {
@@ -904,7 +907,7 @@ button:hover {
     margin-bottom: 0.5rem;
   }
   
-  /* Categorías filtrables (solo estilo, lógica de filtrado CSS puede agregarse si usás checkboxes o radio buttons ocultos) */
+  /* Categorías filtrables
   /* Estilo base del contenedor */
 .grid-categorias {
     display: flex;
