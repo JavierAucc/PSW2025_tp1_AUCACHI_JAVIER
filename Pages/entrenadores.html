@@ -178,7 +178,14 @@
                 <h3>Suscríbete para mantenerte Informado</h3>
                 <form action="#" method="post">
                     <input type="email" placeholder="Ingresa tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
+                    <button type="button" id="subscribe-btn">Suscribirse</button>
+                        <!-- Modal -->
+                        <dialog class="modal" id="mainModal">
+                            <h1>¡Gracias por suscribirte!</h1>
+                            <p>Recibirás nuestras novedades y promociones en tu correo electrónico.</p>
+                            <p>¡Bienvenido a la comunidad de Esparta Gym!</p>
+                            <button type="button" id="close-btn">Cerrar</button>
+                        </dialog>
                 </form>
             </div>
             <!-- Contacto -->
@@ -187,11 +194,11 @@
                 <p>Correo: newellsito@gmail.com</p>
                 <p>Teléfono: +54 978941354</p>
                 <ul>
-                    <li><a href="#"><img src="../Multimedia/images/icons/facebook-icon.png" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="../Multimedia/images/icons/instagram-icon.png" alt="Instagram"></a></li>
-                    <li><a href="#"><img src="../Multimedia/images/icons/tiktok-icon.png" alt="TikTok"></a></li>
-                    <li><a href="#"><img src="../Multimedia/images/icons/youtube-icon.png" alt="YouTube"></a></li>
-                    <li><a href="#"><img src="../Multimedia/images/icons/twitter-icon.png" alt="Twitter"></a></li>
+                    <li><a href="https://www.unju.edu.ar/" target="_blank"><img src="../Multimedia/images/icons/facebook-icon.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.unju.edu.ar/" target="_blank"><img src="../Multimedia/images/icons/instagram-icon.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.unju.edu.ar/" target="_blank"><img src="../Multimedia/images/icons/tiktok-icon.png" alt="TikTok"></a></li>
+                    <li><a href="https://www.unju.edu.ar/" target="_blank"><img src="../Multimedia/images/icons/youtube-icon.png" alt="YouTube"></a></li>
+                    <li><a href="https://www.unju.edu.ar/" target="_blank"><img src="../Multimedia/images/icons/twitter-icon.png" alt="Twitter"></a></li>
                 </ul>
             </div>
             <!-- Mapa -->
@@ -204,6 +211,7 @@
                 </iframe>
             </div>
         </div>
+    
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>&copy; 2025 Esparta Gym. Todos los derechos reservados.</p>
@@ -216,6 +224,37 @@
             </nav>
         </div>
     </footer>
+    <!-- script para el modal del footer-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('mainModal');
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            const closeBtn = document.getElementById('close-btn');
+
+            // Asegúrate de que el modal esté cerrado al cargar
+            if (modal.open) modal.close();
+
+            // Función para mostrar el modal
+            function openModal() {
+                if (typeof modal.showModal === 'function') {
+                    modal.showModal();
+                }
+            }
+
+            // Función para cerrar el modal
+            function closeModal() {
+                if (typeof modal.close === 'function') {
+                    modal.close();
+                }
+            }
+
+            // Mostrar el modal al hacer clic en "Suscribirse"
+            subscribeBtn.addEventListener('click', openModal);
+
+            // Cerrar el modal al hacer clic en "Cerrar"
+            closeBtn.addEventListener('click', closeModal);
+        });    
+    </script>
     
 </body>
 </html>

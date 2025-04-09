@@ -573,22 +573,57 @@ footer {
 }
 /*  Formulario de inscripcion*/
 .contact-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex: 1; /* Ocupa el espacio restante */
+    max-width: 600px; /* Ancho máximo del formulario */
+    background: rgba(255, 255, 255, 0.15); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(24, 233, 233, 0.4);
+    margin: 0 80px; /* Centra el contenedor en la página */
+    max-width: 500px; /* Ancho máximo del formulario */
 }
 .contact-form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
-    background: #fff;
+    background: rgba(177, 228, 38, 0.466);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px; /* Ancho máximo del formulario */
+    font-weight: bold;
 }
+/* Contenedor de Cards del Formulario */
+.cards-cont-izq, .cards-cont-der{
+    display: flex;
+    flex-direction: column; /* Apila las tarjetas verticalmente */
+    width: 220px; /* Ancho fijo para las tarjetas */
+}
+.cards-cont-izq {
+    margin-right: 5px; /* Reduce el espacio a la derecha de las tarjetas de la izquierda */
+}
+
+.cards-cont-der {
+    margin-left: 5px; /* Reduce el espacio a la izquierda de las tarjetas de la derecha */
+}
+
+.contact-form-container {
+    max-width: 400px; 
+}  
+  /* Contenedor principal de las cards y el formulario*/
+.content-container {
+    display: flex;
+    justify-content: space-around; /* Espacio entre las tarjetas y el formulario */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 
 .form-group {
     display: flex;
@@ -995,3 +1030,5 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
+
+  
