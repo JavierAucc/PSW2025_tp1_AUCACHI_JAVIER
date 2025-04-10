@@ -589,7 +589,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
-    background: rgba(177, 228, 38, 0.466);
+    background: rgba(239, 243, 242, 0.877);
     padding: 20px;
     border-radius: 10px;
     width: 100%;
